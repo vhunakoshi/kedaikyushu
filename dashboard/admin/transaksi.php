@@ -80,7 +80,7 @@ $member = mysqli_query($kon, "SELECT * FROM tb_user WHERE id_level = 5");
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Pembayaran</label>
+                            <label for="">Pembelian</label>
                             <select name="member" class="form-control">
                                 <option selected value=""></option>
                                 <?php foreach ($member as $m): ?>

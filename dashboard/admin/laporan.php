@@ -14,7 +14,7 @@
                         <th>No</th>
                         <th>No Order</th>
                         <th>No Meja</th>
-                        <th>Jenis Pembayaran</th>
+                        <th>Pembelian</th>
                         <th>Tanggal Transaksi</th>
                         <th>Total Bayar</th>
                         <th>Diskon</th>

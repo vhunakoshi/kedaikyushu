@@ -26,10 +26,10 @@
 				  			<label class="form-label" for="id_level">id_level</label>
 				  			<select name="id_level" id="id_level" class="form-control">
 				  				<option value="1">Admin</option>
-				  				<option value="2">Koki</option>
+				  				<option value="2">Waiter</option>
 				  				<option value="3">Kasir</option>
 				  				<option value="4">Owner</option>
-				  				<option value="5">Pembayaran</option>
+				  				<option value="5">Pembelian</option>
 				  			</select>
 				  		</div>
 				  		<button type="submit" class="btn btn-primary">Submit</button>

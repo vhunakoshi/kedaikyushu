@@ -24,7 +24,7 @@ if ($cek > 0) {
 	} elseif ($data['id_level']==2) {
 		$_SESSION['nama_user'] = $data['nama_user'];
 		$_SESSION['id_user'] = $data['id_user'];
-		$_SESSION['level'] = "Koki";
+		$_SESSION['level'] = "Waiter";
 		header("location:../dashboard/index.php?home");
 
 	} elseif ($data['id_level']==3) {

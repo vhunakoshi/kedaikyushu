@@ -9,8 +9,8 @@ $belumbayar = mysqli_query($kon, "SELECT COUNT(*) AS belum_bayar FROM tb_order W
 $belum = mysqli_fetch_assoc($belumbayar);
 $jumlahmakanan = mysqli_query($kon, "SELECT COUNT(*) AS makanan FROM tb_masakan ");
 $makanan = mysqli_fetch_assoc($jumlahmakanan);
-$jumlahpelanggan = mysqli_query($kon, "SELECT COUNT(*) AS pelanggan FROM tb_user WHERE id_level='5' ");
-$pelanggan = mysqli_fetch_assoc($jumlahpelanggan);
+$jumlahpembayaran = mysqli_query($kon, "SELECT COUNT(*) AS pembayaran FROM tb_user WHERE id_level='5' ");
+$pembayaran = mysqli_fetch_assoc($jumlahpembayaran);
 $jumlahwaiter = mysqli_query($kon, "SELECT COUNT(*) AS waiter FROM tb_user WHERE id_level='2' ");
 $waiter = mysqli_fetch_assoc($jumlahwaiter);
 $jumlahkasir = mysqli_query($kon, "SELECT COUNT(*) AS kasir FROM tb_user WHERE id_level='3' ");
@@ -22,7 +22,7 @@ $kasir = mysqli_fetch_assoc($jumlahkasir);
 	<div class="card bg-success text-white border-success mb-3">
   		<div class="row no-gutters">
     		<div class="col-md-1">
-      			<img src="assets/image/1man.png" class="p-3" alt="foto" width="100">
+      			<img src="assets/image/1man.png" class="p-3" alt="foto" width="350">
     		</div>
     		<div class="col-md-11">
       			<div class="card-body">
@@ -90,8 +90,10 @@ $kasir = mysqli_fetch_assoc($jumlahkasir);
 			    	<div class="col-md-10">
 			      		<div class="ml-4 card-body">
 			        		<h6 class="card-title">Total Pegawai :</h6>
-			        		<span class="btn btn-primary btn-sm text-small"><?= $Koki['Koki'] ?> Koki</span>
+			        		<span class="btn btn-primary btn-sm text-small"><?= $Waiter['Waiter'] ?> Waiter</span>
 			        		<span class="btn btn-secondary btn-sm text-small"><?= $kasir['kasir'] ?> Kasir</span>
+			        		<span class="btn btn-secondary btn-sm text-small"><?= $Admin['Admin'] ?> Admin</span>
+			        		<span class="btn btn-secondary btn-sm text-small"><?= $Owner['Owner'] ?> Owner</span>
 			      		</div>
 			    	</div>
 		  		</div>
@@ -105,8 +107,10 @@ $kasir = mysqli_fetch_assoc($jumlahkasir);
 		    		</div>
 			    	<div class="col-md-10">
 			      		<div class="ml-4 card-body">
-			        		<h6 class="card-title">Total Pelanggan :</h6>
-			        		<span class="btn btn-secondary btn-sm text-small"><?= $pelanggan['pelanggan'] ?> Pelanggan</span>
+			        		<h6 class="card-title">Metode Transaksi:</h6>
+			        		<span class="btn btn-secondary btn-sm text-small"><?= $Pembelian['Pembelian'] ?> Take Away</span>
+			        		<span class="btn btn-secondary btn-sm text-small"><?= $embelian['Pembelian'] ?> Dine In</span>
+			        		<span class="btn btn-secondary btn-sm text-small"><?= $Pembelian['Pembelian'] ?> Delivery</span>
 			      		</div>
 			    	</div>
 		  		</div>

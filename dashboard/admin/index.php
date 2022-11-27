@@ -3,10 +3,10 @@
         <?= $_SESSION['pesan'] ?>
     <?php unset($_SESSION['pesan']); endif; ?>
     <div class="card mb-3">
-      <img src="assets/image/poster.png" class="card-img-top" height="180">
+      <img src="assets/image/banner.png" class="card-img-top" height="180">
       <div class="card-body">
-          <h3 class="card-title">Selamat Datang di Halaman Utama</h3>
-          <p class="card-text">Sistem Kasir Restoran</p>
+          <h3 class="card-title">Selamat Datang</h3>
+          <p class="card-text">Di Kedai KYUSHU JAPANESE STREET FOOD</p>
       </div>
     </div>
     <h3 class="mb-3">Masakan</h3>
@@ -15,7 +15,7 @@
         <div class="row">
           <!-- mengambil data dari database -->
           <?php
-            $query = "SELECT * FROM tb_masakan WHERE kategori_masakan='Makanan' ORDER BY id_masakan LIMIT 7";
+            $query = "SELECT * FROM tb_masakan WHERE kategori_masakan='Makanan' ORDER BY id_masakan LIMIT 30";
             $sql = mysqli_query($kon, $query);
             while($data = mysqli_fetch_array($sql)) :
           ?>

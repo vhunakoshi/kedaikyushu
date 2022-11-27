@@ -21,7 +21,7 @@ include 'fungsi/rupiah.php';
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/fontawesome-pro/css/all.min.css">
     <!-- <script src="https://kit.fontawesome.com/7ff23e7e04.js" crossorigin="anonymus"></script> -->
-    <title>Halaman Administrator</title>
+    <title>Kyushu JSF</title>
 
   </head>
 
@@ -30,8 +30,8 @@ include 'fungsi/rupiah.php';
     $level = $_SESSION['level'];
 
       if ($level=="Admin") {
-        $color = "#3e206d";
-      } elseif ($level=="Koki") {
+        $color = "#00c6c8";
+      } elseif ($level=="Waiter") {
         $color = "#2c7873";
       } elseif ($level=="Kasir") {
         $color = "#527318";

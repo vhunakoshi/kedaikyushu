@@ -36,13 +36,13 @@
 							if ($data['id_level']==1) {
 								$level = "Admin";
 							} elseif ($data['id_level']==2) {
-								$level = "Koki";
+								$level = "Waiter";
 							} elseif ($data['id_level']==3) {
 								$level = "Kasir";
 							} elseif ($data['id_level']==4) {
 								$level = "Owner";
 							} else {
-								$level = "Pembayaran";
+								$level = "Pembelian";
 
 							}
 						?>

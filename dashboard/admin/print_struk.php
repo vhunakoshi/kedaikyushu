@@ -41,7 +41,7 @@ $hartot = mysqli_fetch_assoc($q_hartot);
               NO ORDER : <?= $struk['id_order'] ?>
             </div>
             <div class="col-md-6">
-              Pembayaran : <?= $struk['id_user'] == 0 ? 'Tidak' : $mem['nama_user'] ?>
+              Pembelian : <?= $struk['id_user'] == 0 ? 'Tidak' : $mem['nama_user'] ?>
             </div>
           </div>
           <hr>
@@ -78,7 +78,7 @@ $hartot = mysqli_fetch_assoc($q_hartot);
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-1"></div>
-            <div class="col-md-4 text-right">Tunai</div>
+            <div class="col-md-4 text-right">Tunai/Nontunai</div>
             <div class="col-md-4 text-right">Rp. <?= rupiah($struk['uang_transaksi']) ?></div>
           </div>
           <div class="row">

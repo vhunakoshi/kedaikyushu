@@ -59,7 +59,7 @@
             <label for="level">Level</label>
             <select name="level" id="level" class="form-control">
               <option value="1">Administrator</option>
-              <option value="2">Koki</option>
+              <option value="2">Waiter</option>
               <option value="3">Kasir</option>
               <option value="4">Owner</option>
               <option value="5">Pembayaran</option>
