@@ -13,8 +13,8 @@
                     <tr> 
                         <th>No</th>
                         <th>No Order</th>
-                        <th>No Meja</th>
-                        <th>Pembelian</th>
+                        <!-- <th>No Meja</th> -->
+                        <!-- <th>Pembelian</th> -->
                         <th>Tanggal Transaksi</th>
                         <th>Total Bayar</th>
                         <th>Diskon</th>
@@ -34,8 +34,8 @@
                     <tr>
                         <td><?= $i++; ?></td>
                         <td><?= $row['id_order'] ?></td>
-                        <td><?= $oq['meja_order'] ?></td>
-                        <td><?= $user['nama_user'] ?></td>
+                        <!-- <td><?php // $oq['meja_order'] ?></td>/ -->
+                        <!-- <td><?php // $user['nama_user'] ?></td> -->
                         <td><?= date('d-m-Y H:i', $oq['tanggal_order']) ?></td>
                         <td>Rp. <?= rupiah($row['hartot_transaksi']) ?></td>
                         <td><?= $row['diskon_transaksi'] ?>%</td>

@@ -13,7 +13,7 @@
                     <tr> 
                         <th>No</th>
                         <th>No Order</th>
-                        <th>No Meja</th>
+                        <!-- <th>No Meja</th> -->
                         <th>Tanggal Order</th>
                         <th>Total Bayar</th>
                         <th>Keterangan</th>
@@ -32,7 +32,7 @@
                     <tr>
                         <td><?= $i++; ?></td>
                         <td><?= $orders['id_order'] ?></td>
-                        <td><?= $orders['meja_order'] ?></td>
+                        <!-- <td><?php // echo $orders['meja_order'] ?></td> -->
                         <td><?= date('d-m-Y H:i', $orders['tanggal_order']) ?></td>
                         <td>Rp. <?= rupiah($hartot['hartot']) ?></td>
                         <td><?= $orders['keterangan_order'] ?></td>

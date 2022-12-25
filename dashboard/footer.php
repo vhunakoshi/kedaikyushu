@@ -45,6 +45,24 @@
         
         // AOS.init();
         $(document).ready(function() {
+            $('.ubahOrder').on('click', function () {
+                let id = $(this).data('id')
+                let qty = $('#qty').val()
+                let url = "<?= $_SERVER['HTTP_HOST']; ?>"
+
+                fetch('http://'+url+'/kedaikyushu/dashboard/fungsi/ubahOrder.php?id='+id+'&qty='+qty, {
+                    method: 'GET'
+                }).then(resp => {
+                    if(resp.status == 200) {
+                        $("#modalKeranjang").modal('hide')
+                       location.reload();
+                    }
+                }).catch(e => {
+                    console.log('Connection Error', e)
+                    $("#modalKeranjang").modal('hide')
+                   location.reload();
+                })
+            })
 
             $('.diskon').on('keyup', function() {
                 let hartot = $('.hartot').val();

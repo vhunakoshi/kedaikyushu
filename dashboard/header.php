@@ -184,7 +184,7 @@ include 'fungsi/rupiah.php';
 
 
 
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div id="modalKeranjang" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -249,9 +249,12 @@ include 'fungsi/rupiah.php';
                       <td><?= $query_masakan['nama_masakan'] ?></td>
                       <td><?= $pesanan['keterangan_dorder'] ?></td>
                       <td>Rp. <?= rupiah($query_masakan['harga_masakan']) ?></td>
-                      <td align="center"><?= $pesanan['jumlah_dorder'] ?></td>
+                      <td align="center" width="10%">
+                        <input type="number" class="form-control" name="qty" id="qty" value="<?= $pesanan['jumlah_dorder'] ?>">
+                      </td>
                       <td>Rp. <?= rupiah($query_masakan['harga_masakan'] * $pesanan['jumlah_dorder']) ?></td>
                       <td>
+                        <button type="button" class="btn btn-sm btn-primary ubahOrder" data-id="<?= $pesanan['id_dorder'] ?>"><i class="fa fa-edit"></i></button>
                         <a href="fungsi/hapusOrder.php?id=<?= $pesanan['id_dorder'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>
