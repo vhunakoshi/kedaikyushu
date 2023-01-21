@@ -32,7 +32,6 @@ $laporan = mysqli_query($kon, "SELECT * FROM tb_transaksi ORDER BY id_transaksi 
                   <tr>
                     <th>No</th>
                     <th>Id Order</th>
-                    <th>Pelanggan</th>
                     <th>Tanggal Transaksi</th>
                     <th>Total</th>
                     <th>Diskon</th>
@@ -50,7 +49,6 @@ $laporan = mysqli_query($kon, "SELECT * FROM tb_transaksi ORDER BY id_transaksi 
                     <tr>
                       <td><?= $i++; ?></td>
                       <td><?= $row['id_order'] ?></td>
-                      <td><?= $user['nama_user'] ?></td>
                       <td><?= date('d-m-Y H:i', $oq['tanggal_order']) ?></td>
                       <td>Rp. <?= rupiah($row['hartot_transaksi']) ?></td>
                       <td><?= $row['diskon_transaksi'] ?>%</td>

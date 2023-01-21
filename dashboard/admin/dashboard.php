@@ -103,23 +103,6 @@ $kasir = mysqli_fetch_assoc($jumlahkasir);
 			<div class="card border-primary mb-3">
 		  		<div class="row">
 		    		<div class="col-md-2">
-		    			<i class="fa fa-book-user p-3 mt-2 fa-4x"></i>
-		    		</div>
-			    	<div class="col-md-10">
-			      		<div class="ml-4 card-body">
-			        		<h6 class="card-title">Metode Transaksi:</h6>
-			        		<span class="btn btn-secondary btn-sm text-small"><?= $Pembelian['Pembelian'] ?> Take Away</span>
-			        		<span class="btn btn-secondary btn-sm text-small"><?= $embelian['Pembelian'] ?> Dine In</span>
-			        		<span class="btn btn-secondary btn-sm text-small"><?= $Pembelian['Pembelian'] ?> Delivery</span>
-			      		</div>
-			    	</div>
-		  		</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="card border-primary mb-3">
-		  		<div class="row">
-		    		<div class="col-md-2">
 		    			<i class="fa fa-book p-3 mt-2 fa-4x"></i>
 		    		</div>
 			    	<div class="col-md-10">

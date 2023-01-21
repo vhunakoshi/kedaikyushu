@@ -200,8 +200,8 @@ include 'fungsi/rupiah.php';
         $no_meja = mysqli_query($kon, "SELECT * FROM tb_meja WHERE status != 1");
         $list_pesanan = mysqli_query($kon, "SELECT * FROM tb_detail_order WHERE id_order = 'ORD000$no_order' AND id_user = '$_SESSION[id_user]'");
         $nono = 'ORD000' . $no_order;
-        $query_hartot = mysqli_query($kon, "SELECT sum(hartot_dorder) as hartot FROM tb_detail_order WHERE id_order = '$nono'");
-        $hartot = mysqli_fetch_assoc($query_hartot);
+        // $query_hartot = mysqli_query($kon, "SELECT sum(hartot_dorder) as hartot FROM tb_detail_order WHERE id_order = '$nono'");
+        // $hartot = mysqli_fetch_assoc($query_hartot);
       ?>
       <form action="fungsi/tambahOrder.php" method="POST">
         <div class="modal-body">
@@ -243,6 +243,8 @@ include 'fungsi/rupiah.php';
                     foreach ($list_pesanan as $pesanan) :
                     $masakan = mysqli_query($kon, "SELECT * FROM tb_masakan WHERE id_masakan = '$pesanan[id_masakan]' ");
                     $query_masakan = mysqli_fetch_assoc($masakan); 
+                    $subtotal = $query_masakan['harga_masakan'] * $pesanan['jumlah_dorder'];
+                    $total = $total + $subtotal;
                   ?>
                     <tr>
                       <td><?= $i++; ?></td>
@@ -252,7 +254,7 @@ include 'fungsi/rupiah.php';
                       <td align="center" width="10%">
                         <input type="number" class="form-control" name="qty" id="qty" value="<?= $pesanan['jumlah_dorder'] ?>">
                       </td>
-                      <td>Rp. <?= rupiah($query_masakan['harga_masakan'] * $pesanan['jumlah_dorder']) ?></td>
+                      <td>Rp. <?= rupiah($subtotal) ?></td>
                       <td>
                         <button type="button" class="btn btn-sm btn-primary ubahOrder" data-id="<?= $pesanan['id_dorder'] ?>"><i class="fa fa-edit"></i></button>
                         <a href="fungsi/hapusOrder.php?id=<?= $pesanan['id_dorder'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
@@ -263,7 +265,7 @@ include 'fungsi/rupiah.php';
                 <tfoot>
                   <tr>
                     <td align="right" colspan="5"><strong>Total Harga : </strong></td> 
-                    <th colspan="2">Rp. <?= rupiah($hartot['hartot']) ?></th>
+                    <th colspan="2">Rp. <?= rupiah($total) ?></th>
                   </tr>
                 </tfoot>
               </table>
