@@ -40,6 +40,9 @@ $hartot = mysqli_fetch_assoc($q_hartot);
               TANGGAL : <?= date('d-m-Y h:i', $struk['tanggal_transaksi']) ?><br>
               NO ORDER : <?= $struk['id_order'] ?>
             </div>
+            <div class="col-md-6">
+              Pembayaran : <?= $struk['id_user'] == 0 ? 'Tidak' : $mem['nama_user'] ?>
+            </div>
           </div>
           <hr>
           <div class="row">
